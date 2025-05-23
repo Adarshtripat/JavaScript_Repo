@@ -1,0 +1,112 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // object literl
+        var obj={} 
+        obj.fname= "adarsh"
+        obj.lname = "tripathi";
+        document.write(obj.fname,"&nbsp &nbsp");
+        document.write(obj.lname);
+
+
+     //object constructore
+        var obj = new Object();
+        obj.selery=3546;
+        document.write("<br>",obj.selery)
+        obj.fname="adarsh"
+        document.write("<br>"+ obj.fname,)
+        document.write("<br>")
+
+//simple object
+        var obj2= {
+            fname : "adarsh",
+            lname : "tripathi"
+        }
+    
+       for(var ad in obj2){
+        document.write(obj2[ad],"<br>")
+       }
+
+    
+
+
+//create object using function
+    function myfun(fname,lname,age){
+        var obj={ 
+            firstName : fname,
+             LastName : lname,
+             age: age
+            }
+           return obj;
+        }
+      var a =  myfun("adarsh","tripathi",26);
+      document.write("First Name:",a.firstName,"<br>","Last Name:",a.LastName,"<br>","age:",a.age)
+      var b=myfun("abhishek","tripathi",24)
+      document.write("<br>")
+      document.write("First Name:",b.firstName,"<br>","Last Name:",b.LastName,"<br>","age:",b.age)
+
+    
+//4th type
+      arrayofobject=[
+        {
+            name: "adarsh",
+            age:26
+        },
+        {
+            name:"abhishek",
+            age:24
+        },
+        {
+            name:"suresh",
+            age:55
+        }
+      ];
+      document.write("<br>","Name:",arrayofobject[0].name,"<br>");
+      document.write("age:",arrayofobject[0].age);
+      document.write("<br>","Name:",arrayofobject[1].name,);
+      document.write("<br>","age:",arrayofobject[1].age,"<br>");
+      document.write("<br>","Name:",arrayofobject[2].name,);
+      document.write("<br>","age:",arrayofobject[2].age);
+        
+      //NEXT example
+      arr=[
+        {
+            name: "adarsh",
+            lname: "Tripathi",
+            age:26,
+            selary:5487
+        },
+        {
+            name:"abhishek",
+            lname: "Tripathi",
+            age:24,
+            selary:54854
+        },
+        {
+            name:"suresh",
+            lname: "shukla",
+            age:55,
+            selary:54482
+        },
+        {
+            name:"shivam",
+            lname: "Sen",
+            age:50,
+            selary:74414
+        }
+      ];
+      var table = "<table border = '1'cellpaddig='10'cellspacing='0'> <th> <td>NAME</td> <td>LNAME</td> <td>Age</td> <td>Selary</td> </th>"
+        for(var i=0;i<arr.length;i++){
+            table+= "<tr> <td>"+(i+1)+"</td> <td>"+arr[i].name+"</td> <td>"+arr[i].lname+"</td> <td>"+arr[i].age+"</td> <td>"+arr[i].selary+"</td> </tr>" 
+        }
+        table+="</table>"
+        document.write(table)
+    </script>
+</body>
+</html>
